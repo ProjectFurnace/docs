@@ -26,16 +26,19 @@ Contains information on the modules used in the ingestion stage as well as any r
 
 <pre>
 module-id:
+  version: 1.2.0
   enabled: true
   shards: 2
   config:
     param-id: val
 
-another-module-id
+another-module-id:
+  version: 1.4.2
   shards: 1
 </pre>
 
 - **module-id** (mandatory): the module identifier
+  - **version** (mandatory): the module version
   - **enabled** (defaults to *false*): whether this module is enabled or not
   - **shards** (defaults to 1): how many shards to use for the input queue
   - **config**
@@ -51,10 +54,12 @@ The *enrichments.yaml* file contains the description of one or more pipelines fo
 pipeline-name:
   modules:
     - id: a-module
+      version: 1.2.1
       workers: 2
       config:
         param-id: a
     - id: another-module
+      version: 1.5.0
       workers: 1
       config:
         param-id: c
@@ -62,17 +67,20 @@ pipeline-name:
 another-pipeline-name:
   modules:
     - id: third-module
+      version: 1.4.2
       workers: 2
       config:
         param-id: a
         param-id-b: b
     - id: a-module
+      version: 0.4.2
       workers: 1
 </pre>
 
 - **pipeline-name** (mandatory): the pipeline name
   - **modules**
-    - **id** (defaults to 1): identifier for the module
+    - **id** (mandatory): identifier for the module
+    - **version** (mandatory): the module version
     - **workers** (defaults to 1): number of workers for this module
     - **config**
       - **param-id**: key-value pairs with configuration parameters for this module
@@ -83,12 +91,14 @@ another-pipeline-name:
 
 <pre>
 module-id:
+  version: 1.3.7
   enabled: true
   config:
     param-id: val
 </pre>
 
 - **module-id** (mandatory): the sink module identifier
+  - **version** (mandatory): the module version
   - **enabled** (defaults to *false*): whether this sink is enabled or not
   - **config**
     - **param-id**: key-value pairs with configuration parameters for this sink

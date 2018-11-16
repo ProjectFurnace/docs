@@ -39,6 +39,7 @@ It is structured as a yaml file. The minimal *info.yaml* file looks like this:
 id: my-module
 version: 1.0.0
 category: ingest
+runtime: nodejs8.10
 core-version:
   min: 0.1.0
   max: 0.3.1
@@ -58,6 +59,7 @@ Whereas a more extended version with additional information would look like this
 id: my-module
 version: 1.0.0
 category: ingest
+runtime: nodejs8.10
 core-version:
   min: 0.1.0
   max: 0.3.1
@@ -85,6 +87,7 @@ dependencies:
 - **id** (Mandatory, 64 chars, [a-z-_]): A module identifier. It will be used as the ZIP name.
 - **version** (Mandatory, 8 chars, [0-9.]): The module version. Should always be incremental and in the format XX.YY.ZZ
 - **category** (Mandatory, Fixed list of options): What category this module belongs to. Options are: *ingest, enrich, filter, action and sink*.
+- **runtime** (Mandatory, Fixed list of options): What runtime to be used to run this module. Options are: *nodejs6.10, nodejs8.10, python2.7, python3.6, go1.x*.
 - **core-version** (Mandatory): Used to specify what is the minimum and maximum version of the core this module will work with.
   - **min**: The oldest version of Furnace core the module will work with.
   - **max**: The newest version of Furnace core the module will work with.
