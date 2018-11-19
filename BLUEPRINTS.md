@@ -25,16 +25,19 @@ A minimal blueprint requires at least:
 Contains information on the modules used in the ingestion stage as well as any relevant configuration parameters for those modules.
 
 <pre>
-module-id:
+- name: test-module
   version: 1.2.0
   enabled: true
   shards: 2
   config:
     param-id: val
 
-another-module-id:
-  version: 1.4.2
-  shards: 1
+- name: test-module2
+  version: 1.2.0
+  enabled: true
+  shards: 2
+  config:
+    param-id: val
 </pre>
 
 - **module-id** (mandatory): the module identifier
@@ -51,7 +54,7 @@ another-module-id:
 The *enrichments.yaml* file contains the description of one or more pipelines for enrichment. Those pipelines are comprised of one or more modules with their configuration parameters.
 
 <pre>
-pipeline-name:
+- name: pipeline-name
   modules:
     - id: a-module
       version: 1.2.1
@@ -64,7 +67,7 @@ pipeline-name:
       config:
         param-id: c
 
-another-pipeline-name:
+- name: another-pipeline-name
   modules:
     - id: third-module
       version: 1.4.2
@@ -90,7 +93,7 @@ another-pipeline-name:
 ### sinks.yaml
 
 <pre>
-module-id:
+- name: module-id
   version: 1.3.7
   enabled: true
   config:
