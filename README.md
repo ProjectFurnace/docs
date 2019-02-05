@@ -1,6 +1,6 @@
 # Furnace
 
-![](https://github.com/ProjectFurnace/furnace/raw/master/assets/furnace-logo-horiz-black.png)
+![](.gitbook/assets/furnace-horiz-black.png)
 
 ### What is Furnace?
 
