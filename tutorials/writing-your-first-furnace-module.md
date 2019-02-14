@@ -11,7 +11,7 @@ Furnace is an Open Source project aimed at providing a framework to make event p
 If you already know about Furnace and what modules are and just need to have a quick overview on how to build them, this section is for you! Only 4 steps:
 
 1. Clone the [module template repo](https://github.com/ProjectFurnace/module-templates/tree/master/nodejs8.10)
-2. Modify config.yaml and module.yaml to suit your module specifics. Those files should almost be self-explanatory but if not, just check the modules' documentation [here](https://docs.furnace.org/core/basics/system-architecture/modules)
+2. Modify config.yaml and module.yaml to suit your module specifics. Those files should almost be self-explanatory but if not, just check the modules' documentation [here](../basics/system-architecture/modules.md)
 3. Modify src/index.js so handler does what you expect your module to do. The handler function receives the event data already as a JSON object and expects the modified event as return.
 4. Include the module in your pipeline and you are good to go!
 
