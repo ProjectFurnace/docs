@@ -11,7 +11,7 @@ Furnace is an Open Source project aimed at providing a framework to make event p
 If you already know about Furnace and what modules are and just need to have a quick overview on how to build them, this section is for you! Only 4 steps:
 
 1. Clone the [module template repo](https://github.com/ProjectFurnace/module-templates/tree/master/nodejs8.10)
-2. Modify config.yaml and module.yaml to suit your module specifics. Those files should almost be self-explanatory but if not, just check the modules' documentation [here](https://github.com/ProjectFurnace/docs/blob/module-doc/MODULES.md)
+2. Modify config.yaml and module.yaml to suit your module specifics. Those files should almost be self-explanatory but if not, just check the modules' documentation [here](https://docs.furnace.org/core/basics/system-architecture/modules)
 3. Modify src/index.js so handler does what you expect your module to do. The handler function receives the event data already as a JSON object and expects the modified event as return.
 4. Include the module in your pipeline and you are good to go!
 
@@ -37,7 +37,7 @@ One of the things we realised when working with other event processing platforms
 
 ### Module structure
 
-To get started, the easiest way is to use the Furnace CLI. You will need it also to create a Furnace stack, so in case you do not have it installed, check the Furnace [_Getting Started_](https://github.com/ProjectFurnace/furnace/blob/master/README.md#getting-started) section of the readme for instructions on how to do so.
+To get started, the easiest way is to use the Furnace CLI. You will need it also to create a Furnace stack, so in case you do not have it installed, check the Furnace [_Getting Started_](../basics/getting-started.md) section of the readme for instructions on how to do so.
 
 Once you have the CLI installed, you can just type:
 
@@ -64,13 +64,13 @@ This file has some general information about the module itself, such as:
 * runtime
 * category
 
-Those are really the main fields, but as you can see in the template, it is fairly easy to figure out what to include in that file and if you need additional information, you can always head to the [full documentation about modules](https://github.com/ProjectFurnace/docs/blob/module-doc/MODULES.md). If you have used the CLI, some fields will have already been filled out for you with the expected values \(mainly id and runtime\), but if you are just cloning from Git, you will need to change those manually.
+Those are really the main fields, but as you can see in the template, it is fairly easy to figure out what to include in that file and if you need additional information, you can always head to the [full documentation about modules](../basics/system-architecture/modules.md). If you have used the CLI, some fields will have already been filled out for you with the expected values \(mainly id and runtime\), but if you are just cloning from Git, you will need to change those manually.
 
 #### config.yaml
 
 This file holds the configuration parameters that your module accepts. If there are no parameters to be setup for the module, you may as well leave this file blank.
 
-As with the module.yaml file, you can head over to the [modules full documentation](https://github.com/ProjectFurnace/docs/blob/module-doc/MODULES.md) for additional information. In here you will be specifying also the type of data a specific parameter accepts, whether or not it is mandatory, defaults and those sorts of things.
+As with the module.yaml file, you can head over to the [modules full documentation](../basics/system-architecture/modules.md) for additional information. In here you will be specifying also the type of data a specific parameter accepts, whether or not it is mandatory, defaults and those sorts of things.
 
 #### src/index.js
 
