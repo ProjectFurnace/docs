@@ -1,6 +1,6 @@
 # Getting started
 
-## DISCLAIMER ##
+## DISCLAIMER 
 
 ***Furnace will deploy resources outside of the free tier on your cloud platform.  We are not responsible for any costs incurred***
 
@@ -14,16 +14,16 @@ Our aim is to have you up and running in less than 5 minutes. You'll need to mee
 
 Further prerequisites are needed depending on which platform you will be deploying to.
 
-#### For AWS: ####
+#### For AWS: 
 * An AWS Account \([https://aws.amazon.com/](https://aws.amazon.com/)\)
 * AWS CLI and a configured profile \([https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)\)
 
-#### For Google Cloud Platform ####
+#### For Google Cloud Platform 
 * A GCP Account \([https://cloud.google.com/](https://cloud.google.com/)\)
 * A GCP Project \([https://console.cloud.google.com/cloud-resource-manager](https://console.cloud.google.com/cloud-resource-manager)\)
 * A GCP Service Account file setup locally \([https://cloud.google.com/docs/authentication/getting-started](https://cloud.google.com/docs/authentication/getting-started)\)
 
-#### For Azure ####
+#### For Azure 
 * An Azure Subscription ID \([https://azure.microsoft.com/](https://azure.microsoft.com/)\)
 * Azure Function Core Tools \([https://github.com/Azure/azure-functions-core-tools](https://github.com/Azure/azure-functions-core-tools)\)
 * .NET Core SDK \([https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)\)
@@ -83,3 +83,40 @@ default environments, to promote the `dev` environment to `staging` you would si
 furnace promote dev
 ```
 
+## Ignite Command line arguments
+
+`furnace ignite` can also be run with the following command line arguments:
+
+#### Global args
+
+These args can be used for any target platform
+
+| Command  | Full  | Alias   | Type   | Default Value   | Description |
+|---|---|---|---|---|---|
+| Platform selection  | --platform   | -p   | String   | null | Which platform you will deploy to `aws`, `azure` or `gcp` |
+| Instance Name  | --name  | -i  | String  | null | The name to give your Furnace Instance |
+| Git Provider  | --gitProvider  | -g   | String  | null | Git provider being used (currently only supporting `github`) |
+| Git Token | --gitToken | -t | String | null | Github access token |
+| Store Git Token | --storeGitHubToken | | Boolean | true | Whether to store the Github token in the config |
+| Location | --location| -l | String | null | Region deploying to. ie `us-west-1` or `uksouth` |
+
+#### Platform Specific Args
+
+These args are platform dependent: 
+
+##### AWS
+| Command  | Full  | Alias   | Type   | Default Value   | Description |
+|---|---|---|---|---|---|
+| Profile | --profile | -x | String | null | Local AWS Profile to use |
+| Access Key Id | --accessKeyId | -a | String | null | AWS API Access Key |
+| Secret Access Key | --secretAccessKey | -p | String | null| AWS API Access Secret |
+
+##### Azure
+| Command  | Full  | Alias   | Type   | Default Value   | Description |
+|---|---|---|---|---|---|
+| Subscription ID| --subscriptionId|-s|String|null| Azure Subscription ID |
+
+##### GCP
+| Command  | Full  | Alias   | Type   | Default Value   | Description |
+|---|---|---|---|---|---|
+| Project ID| --projectId|-j|String|null| GCP Project Name|
