@@ -35,3 +35,7 @@ For the following examples we will assume that the Furnace Instance has been cal
 ## Log Locations
 
 Logs for deployment can be found in the Container Group resource in the stack Resource Group.
+
+## Known Issues
+
+For some reason you may get a 500 error on the deploy function trigger, if this happens try restarting the deploy function app. 
