@@ -23,11 +23,14 @@ Further prerequisites are needed depending on which platform you will be deployi
 * A GCP Project \([https://console.cloud.google.com/cloud-resource-manager](https://console.cloud.google.com/cloud-resource-manager)\)
 * A GCP Service Account file setup locally \([https://cloud.google.com/docs/authentication/getting-started](https://cloud.google.com/docs/authentication/getting-started)\)
 
+To list projects already available in GCP if you have them run `gcloud projects list` from the gcloud CLI
+
 #### For Azure 
 * An Azure Subscription ID \([https://azure.microsoft.com/](https://azure.microsoft.com/)\)
 * Azure Function Core Tools \([https://github.com/Azure/azure-functions-core-tools](https://github.com/Azure/azure-functions-core-tools)\)
 * .NET Core SDK \([https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)\)
 
+To find your subscription ID run `az account show --query id -o tsv` from the Azure CLI
 
 ## Ignite the Furnace
 The process starts with installing the Furnace CLI and running `furnace ignite`
