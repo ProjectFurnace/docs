@@ -36,7 +36,7 @@ To find your subscription ID run `az account show --query id -o tsv` from the Az
 The process starts with installing the Furnace CLI and running `furnace ignite`
 
 ```text
-npm install @project-furnace/furnace-cli -g
+npm install @project-furnace/cli -g
 furnace ignite
 ```
 
